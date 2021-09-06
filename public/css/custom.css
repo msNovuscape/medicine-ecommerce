@@ -1,0 +1,139 @@
+.section_title {
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #103178;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cs_brands_title {
+    display: block;
+    color: #333;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cs_section_categories {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.cs_upload_prescription {
+  font-size: 14px;
+  color: #5b6c8f;
+  margin-right: 20px;
+  padding: 12px 0;
+}
+
+.cs_btn_prescription {
+    border: 1px solid #00A8FF !important;
+    background-color: #00A8FF !important;
+    color: white !important;
+}
+
+.cs_btn_prescription:hover {
+    background-color: white !important;
+    color: #00A8FF !important;
+}
+
+.review_author {
+    margin: 5px auto;
+}
+
+hr.white {
+    border-top: 1px solid #fff;
+}
+
+/* .ps-footer--4 .ps-footer--address {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+} */
+
+.ps-footer--contact .ps-footer__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.ps-footer--contact .ps-footer__email:hover {
+    color: #103178;
+}
+
+.cs_out_of_stock {
+    color: #9babcd;
+}
+
+.ps-table--product .cs_out_of_stock span::before {
+    content: '\f00d';
+    color: #9babcd;
+    font-size: 75%;
+    display: inline-block;
+    font-weight: 900;
+    font: normal normal normal 14px/1 FontAwesome;
+    margin: -3px 10px 0 0;
+}
+
+.ps-btn--success:hover {
+    background-color: white !important;
+    color: #12a05c !important;
+    border: 1px solid #12a05c !important;
+}
+
+.cs_btn {
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: none;
+    text-shadow: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 2px 10px;
+    line-height: 24px;
+    display: inline-block;
+    width: 100%;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+.cardHealth {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:90%;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .cardcardHealth:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .containerHealth {
+    padding: 10px 16px;
+  }
+  .expertName{
+      margin-top:5px ;
+      text-align: center;
+  }
