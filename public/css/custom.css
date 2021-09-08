@@ -137,3 +137,27 @@ hr.white {
       margin-top:5px ;
       text-align: center;
   }
+
+
+  /* Testimonial */
+  @media screen and (max-width: 767px) {
+    .ps-section--reviews .ps-section__content .owl-carousel {
+        /* width: 95vw !important; */
+        max-height: none !important;
+        min-height: 500px !important;
+    }
+    .ps-home--1 .ps-section--reviews {
+        padding-bottom: 0 !important;
+        /* margin-bottom: 0 !important; */
+    }
+    .ps-section--reviews .ps-section__content .owl-dots {
+        bottom: 40px !important;
+    }
+    .ps-review {
+        padding: 0;
+    }
+  }
+
+  .ps-banner .ps-banner__thumnail .ps-banner__image {
+      object-fit: contain !important;
+  }

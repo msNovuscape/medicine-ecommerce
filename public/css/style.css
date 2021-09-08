@@ -8324,7 +8324,7 @@ textarea.form-control {
      object-fit: cover;
 }
 .back{
-  height: 350px;
+  min-height: 350px;
   text-align:center;
   
 }
@@ -10157,11 +10157,11 @@ textarea.form-control {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1800px) {
   .ps-section--reviews .ps-section__content .owl-carousel {
-    width: calc(100vw + 240px);
+    /* width: calc(100vw + 240px);
     margin-left: calc(-50vw + 50% - 120px);
-    margin-right: calc(-50vw + 50% - 120px);
+    margin-right: calc(-50vw + 50% - 120px); */
   }
 }
 
@@ -10422,8 +10422,8 @@ textarea.form-control {
   margin-bottom: 0;
 }
 .ps-review__text{
-  margin-left:85px;
-  margin-right:80px;
+  /* margin-left:85px;
+  margin-right:80px; */
 }
 
 .ps-reviews--3 .ps-review .ps-review__author {

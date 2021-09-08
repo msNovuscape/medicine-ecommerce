@@ -50,7 +50,7 @@
                                 items: dataItemXS
                             },
                             480: {
-                                items: dataItemSM
+                                items: dataItemXS
                             },
                             768: {
                                 items: dataItemMD
