@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
     @section('content')
-    <div class="ps-categogy--promo">
+    <div class="ps-categogy--promo ps-testimonail-list">
     <div class="container">
                 <ul class="ps-breadcrumb">
                     <li class="ps-breadcrumb__item"><a href="{{route('frontend.index')}}">Home</a></li>
@@ -12,7 +12,6 @@
                 <div class = "row">
                 @foreach($testinomials as $testinomial)
                     <div class="col-12 col-md-4">
-                        <br/>
                         <div class="cardHealth">
                             <img style = "width:100%" src="{{$testinomial->image_path}}" alt="Avatar">
                             <div class="containerHealth" >
