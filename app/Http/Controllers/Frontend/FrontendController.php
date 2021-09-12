@@ -273,6 +273,7 @@ class FrontendController extends Controller
     }
     public function list_prescription(){
         $prescriptions = Prescription::where('client_id',auth()->user()->id)->orderBy('id','desc')->paginate(10);
+        
         return view('frontend.users.prescription.index',compact('prescriptions'));
     }
     public function prescription(){
