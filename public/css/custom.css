@@ -140,18 +140,32 @@ hr.white {
 
 
   /* Testimonial */
+  .ps-section--reviews .ps-section__content .owl-carousel {
+    /* width: 95vw !important; */
+    max-height: none !important;
+    min-height: 300px !important;
+}
+.ps-home--1 .ps-section--reviews {
+    padding: 50px 0 !important;
+}
+.ps-section--reviews .ps-section__content .owl-dots {
+    bottom: -30px !important;
+}
+/* .ps-section--reviews .owl-carousel .owl-stage {
+    max-height: 600px;
+} */
   @media screen and (max-width: 767px) {
     .ps-section--reviews .ps-section__content .owl-carousel {
         /* width: 95vw !important; */
         max-height: none !important;
-        min-height: 500px !important;
+        min-height: 300px !important;
     }
     .ps-home--1 .ps-section--reviews {
-        padding-bottom: 0 !important;
+        padding-bottom: 60px !important;
         /* margin-bottom: 0 !important; */
     }
     .ps-section--reviews .ps-section__content .owl-dots {
-        bottom: 40px !important;
+        bottom: -30px !important;
     }
     .ps-review {
         padding: 0;
