@@ -1,6 +1,8 @@
 @extends('frontend.master')
 
     @section('content')
+    <section class="ps-inner-page">
+
         <div class = "container" style = "justify-content:center">
         <h5 class="text-uppercase m-b-5" style = "font-size:30px">Return Policy</h5>
         <div class="">
@@ -28,4 +30,5 @@
                                         </div>
                                     </div>
         </div>    
+    </section>
     @endsection

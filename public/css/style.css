@@ -70,7 +70,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
   font-weight: 600;
   font-family: "Jost", sans-serif;
+  line-height: 1.5;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -115,15 +116,28 @@ h6 {
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.6em;
-  color: #9babcd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  /* color: #9babcd; */
 }
 
 p span {
   font-family: inherit;
   color: inherit;
   font-size: inherit;
+}
+
+p + ul, p + ol {
+  padding-left: 30px !important;
+  margin-bottom: 1.2rem !important;
+}
+
+p + ol {
+  list-style: numeric !important;
+}
+
+P + ol li + li, P + ul li + li {
+  margin-top: 12px;
 }
 
 a {
@@ -2531,6 +2545,9 @@ textarea.form-control {
   .ps-section--mask-info .ps-section__title {
     font-size: 50px;
     line-height: 60px;
+  }
+  .ps-section__title {
+    text-align: left;
   }
   .ps-section--mask-info .ps-section__subtitle {
     font-size: 20px;
@@ -6906,9 +6923,9 @@ textarea.form-control {
   height: 100%;
 }
 
-.ps-promo__item:hover .ps-promo__banner {
+/* .ps-promo__item:hover .ps-promo__banner {
   transform: scale(1.1, 1.1);
-}
+} */
 
 .ps-promo__title {
   margin-bottom: 20px;
@@ -7781,6 +7798,7 @@ textarea.form-control {
   .ps-shopping .ps-section--latest .ps-section__title {
     font-size: 30px;
     line-height: 40px;
+    /* text-align: left; */
   }
   .ps-shopping .ps-shopping__footer .ps-btn {
     padding: 10px 25px;
@@ -11924,10 +11942,10 @@ textarea.form-control {
 }
 
 .ps-wishlist .ps-wishlist__title {
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
   color: #103178;
   font-size: 26px;
-  line-height: 30px;
+  line-height: 1.5;
 }
 
 .ps-wishlist .ps-wishlist__list li {
@@ -11982,7 +12000,7 @@ textarea.form-control {
 @media (min-width: 1280px) {
   .ps-wishlist .ps-wishlist__title {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 1.5;
   }
 }
 
