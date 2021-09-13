@@ -470,18 +470,7 @@
                                                 </div>
                                                 
                                                 <div class="ps-product__actions ps-product__group-mobile">
-                                                    <div class="ps-product__quantity">
-                                                        <div class="def-number-input number-input safari_only">
-                                                            <button class="minus"
-                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
-                                                                    class="icon-minus"></i></button>
-                                                            <input class="quantity" min="0" name="quantity" value="1"
-                                                                type="number" />
-                                                            <button class="plus"
-                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
-                                                                    class="icon-plus"></i></button>
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <div class="ps-product__cart"> <a class="ps-btn ps-btn--lblue"
                                                             href="#" data-toggle="modal" data-target="#popupAddcart">Add
                                                             to cart</a></div>

@@ -4079,7 +4079,8 @@ textarea.form-control {
 }
 
 .ps-product--detail .ps-product__info {
-  margin-bottom: 80px;
+  margin-bottom: 5px;
+  margin-top: -40px;
 }
 
 .ps-product--detail.ps-product--full .ps-product__desc li {
@@ -4179,6 +4180,7 @@ textarea.form-control {
 .ps-product--detail .ps-tab-list {
   border: none;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .ps-product--detail .ps-tab-list li {
@@ -4186,7 +4188,7 @@ textarea.form-control {
 }
 
 .ps-product--detail .ps-tab-list li a {
-  font-size: 22px;
+  font-size: 14px;
   line-height: 26px;
   color: #103178;
   padding: 0;
@@ -5034,6 +5036,8 @@ textarea.form-control {
   color: #103178;
   line-height: 42px;
   margin-bottom: 10px;
+  padding-top: 20px;
+  
 }
 
 .ps-banner .ps-banner__text {
@@ -11571,6 +11575,7 @@ textarea.form-control {
 
 .ps-about--video .ps-banner .ps-banner__title {
   margin-bottom: 20px;
+  
 }
 
 .ps-about--video .ps-banner .ps-banner__desc {

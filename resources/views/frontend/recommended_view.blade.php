@@ -28,8 +28,11 @@
                                             </div>
                                             <div class="ps-product__content">
                                                 <h5 class="ps-product__title"><a href="{{route('frontend.product',['slug' => $recommended_medicine->slug])}}">{{$recommended_medicine->medicine_name}}</a></h5>
-                                                <div class="ps-product__meta"><span class="ps-product__price">Rs
-                                                {{App\Models\Stock::where('medicine_id',$recommended_medicine->id)->orderBy('id','desc')->first()->sp_per_tab ?? $recommended_medicine->sp_per_piece}}</span>
+                                                <div class="ps-product__meta"><span class="ps-product__price">@php
+                                                            $price = App\Models\Stock::where('medicine_id',$recommended_medicine->id)->orderBy('id','desc')->first()->sp_per_tab ?? $recommended_medicine->sp_per_piece;
+                                                        @endphp
+                                                        Rs
+                                                    {{$price == 0 ? 'N/A':$price}}</span>
                                                 </div>
                                                 
                                                 

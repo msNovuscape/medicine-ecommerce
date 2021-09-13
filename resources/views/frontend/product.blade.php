@@ -22,8 +22,8 @@
                                                 @else 
                                                     <img src="{{$product->img ?? $product->image_url}}" alt="Image unavailable" />
                                                 @endif   </div>
-                                                <div class="slide">@if($product->image_url1 != null)<img src="{{$product->imgage_url1}}" alt="alt" />@else <img src = "https://images.onlineaushadhi.com/img/no-med.png"> @endif</div>
-                                                <div class="slide">@if($product->image_url2 != null)<img src="{{$product->imgage_url2}}" alt="alt" />@else <img src = "https://images.onlineaushadhi.com/img/no-med.png"> @endif</div>
+                                                @if($product->image_url1 != null)<div class="slide"><img src="{{$product->imgage_url1}}" alt="alt" /></div>@endif
+                                                @if($product->image_url2 != null)<div class="slide"><img src="{{$product->imgage_url2}}" alt="alt" /></div>@endif
                                             </div>
                                             <div class="ps-gallery--image">
                                                 <div class="slide">
@@ -31,14 +31,19 @@
                                                             alt="alt" />
                                                     </div>
                                                 </div>
+
+                                                @if($product->image_url1 != null)
                                                 <div class="slide">
-                                                    <div class="ps-gallery__item">@if($product->image_url1 != null)<img src="{{$product->imgage_url1}}" alt="alt" />@else <img src = "https://images.onlineaushadhi.com/img/no-med.png"> @endif
+                                                    <div class="ps-gallery__item"><img src="{{$product->imgage_url1}}" alt="alt" />
                                                     </div>
                                                 </div>
+                                                @endif
+                                                @if($product->image_url2 != null)
                                                 <div class="slide">
-                                                    <div class="ps-gallery__item">@if($product->image_url2 != null)<img src="{{$product->imgage_url2}}" alt="alt" />@else <img src = "https://images.onlineaushadhi.com/img/no-med.png"> @endif
+                                                    <div class="ps-gallery__item"><img src="{{$product->imgage_url2}}" alt="alt" />
                                                     </div>
                                                 </div>
+                                                @endif
                                                 
                                             </div>
                                         </div>
@@ -375,8 +380,11 @@
                                                 </div>
                                                 <div class="ps-product__content">
                                                     <h5 class="ps-product__title"><a href="{{route('frontend.product',['slug' => $similar_product->slug])}}">{{$similar_product->medicine_name}}</a></h5>
-                                                    <div class="ps-product__meta" style = "margin-top:-15px"><span class="ps-product__price sale">Rs
-                                                            {{$similar_product->sp_per_piece}}</span>
+                                                    <div class="ps-product__meta" style = "margin-top:-15px"><span class="ps-product__price sale">@php
+                                                            $price = App\Models\Stock::where('medicine_id',$similar_product->id)->orderBy('id','desc')->first()->sp_per_tab ?? $similar_product->sp_per_piece;
+                                                        @endphp
+                                                        Rs
+                                                    {{$price == 0 ? 'N/A':$price}}</span>
                                                     </div>
                                                     <!-- <div class="ps-product__rating">
                                                         <select class="ps-rating" data-read-only="true">
@@ -1104,8 +1112,11 @@
                                                 </div>
                                                 <div class="ps-product__content">
                                                     <h5 class="ps-product__title"><a href="{{route('frontend.product',['slug' => $substitute_product->slug])}}">{{$substitute_product->medicine_name}}</a></h5>
-                                                    <div class="ps-product__meta"><span class="ps-product__price sale">Rs
-                                                    {{App\Models\Stock::where('medicine_id',$substitute_product->id)->orderBy('id','desc')->first()->sp_per_tab ?? $substitute_product->sp_per_piece}}</span>
+                                                    <div class="ps-product__meta"><span class="ps-product__price sale">@php
+                                                            $price = App\Models\Stock::where('medicine_id',$substitute_product->id)->orderBy('id','desc')->first()->sp_per_tab ?? $substitute_product->sp_per_piece;
+                                                        @endphp
+                                                        Rs
+                                                    {{$price == 0 ? 'N/A':$price}}</span>
                                                     </div>
                                                    
                                                     <div class="ps-product__actions ps-product__group-mobile">
