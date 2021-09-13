@@ -489,3 +489,11 @@ hr.white {
   .ps-inner-page p + ul {
       list-style: disc !important;
   }
+
+  .ps-page--product .ps-product__thumbnail img {
+    padding: 2px;
+    background-color: #eee;
+  }
+  .ps-page--product .ps-product--gallery .ps-product__thumbnail {
+      padding-left: 0 !important;
+  }
