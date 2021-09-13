@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                        <section class="ps-section--latest mb-50">
+                        <section class="ps-section--latest ps-section--trending mb-50">
                             <h3 class="ps-section__title"> Available Brands</h3>
                             <div class="ps-section__carousel">
                                 <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="13000"
