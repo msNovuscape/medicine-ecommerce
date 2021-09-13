@@ -3,7 +3,7 @@
     <section class="ps-inner-page">
 
         <div class = "container" style = "justify-content:center">
-            <h5 class="text-uppercase m-b-5" style = "font-size:30px">FAQ (FREQUENTLY ASKED QUESTIONS)</h5>
+            <h3 class="ps-inner-page__title">FAQ (FREQUENTLY ASKED QUESTIONS)</h3> <hr>
             <div>
                 <ol class="more-gutter">
                     <br/>

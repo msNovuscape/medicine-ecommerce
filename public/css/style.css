@@ -11941,7 +11941,7 @@ textarea.form-control {
   }
 }
 
-.ps-wishlist .ps-wishlist__title {
+.ps-wishlist .ps-wishlist__title, .ps-inner-page__title {
   margin-bottom: 1.5rem;
   color: #103178;
   font-size: 26px;

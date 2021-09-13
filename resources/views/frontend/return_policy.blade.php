@@ -4,7 +4,7 @@
     <section class="ps-inner-page">
 
         <div class = "container" style = "justify-content:center">
-        <h5 class="text-uppercase m-b-5" style = "font-size:30px">Return Policy</h5>
+        <h3 class="ps-inner-page__title">Return Policy</h3> <hr>
         <div class="">
                                         <div class="thumbnail thumbnail--no-border">
                                             <div class="caption">

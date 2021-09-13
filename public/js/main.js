@@ -64,7 +64,8 @@
                             },
                             1200: {
                                 items: dataItemXL,
-                                autoHeight: true
+                                autoHeight: true,
+                                loop: true,
                             },
                             1680: {
                                 items: dataDefaultItem,
@@ -88,6 +89,8 @@
 
             });
         }
+
+        // $('.owl-nav').removeClass('disabled');
     }
 
     // function limitReview() {

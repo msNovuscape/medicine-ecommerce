@@ -4,7 +4,7 @@
 <section class="ps-inner-page">
 
     <div class = "container">
-    <h5 class="text-uppercase m-b-5" style="font-size:30px">Privacy Policy</h5>
+    <h3 class="ps-inner-page__title">Privacy Policy</h3><hr>
                                                             <p>Online Aushadhi recognizes the importance of privacy issues. This Privacy Policy briefly tells you how we manage the personal information that we collect, use and disclose and how to contact us if you have any queries. </p>
                                                             <ul class="sub-terms">
                                                                 <li><span class="title title--sm">Personal Information</span>
