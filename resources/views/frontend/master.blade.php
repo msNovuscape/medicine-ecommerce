@@ -681,11 +681,11 @@
             <div class="ps-footer--bottom">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <p>© 2021 Online Ausadhi. All Rights Reserved | Powered by: <a href="#">DAC</a>
+                        <p>© 2021 Online Ausadhi. All Rights Reserved | Powered by: <a target = "_blank" href="http://digitalagencycatmandu.com/">DAC</a>
                         </p>
                     </div>
-                    <div class="col-12 col-md-6 text-right"><img src="img/payment.png" alt><img class="payment-light"
-                            src="img/payment.png" alt></div>
+                    <div class="col-12 col-md-6 text-right"><img src="{{URL::asset('img/payment.png')}}" alt><img class="payment-light"
+                            src="{{URL::asset('img/payment.png')}}" alt></div>
                 </div>
             </div>
         </div>

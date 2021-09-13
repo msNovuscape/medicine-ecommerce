@@ -58,8 +58,8 @@
                                 <p>Your queries</p>
                             </div>
                             <div class="ps-categories__item"><a 
-                                    target = "" href="http://healthtips.onlineaushadhi.com/"><img src="https://images.onlineaushadhi.com/img/healthcornerico.png" alt></a><a
-                                    class="ps-categories__name" href="http://healthtips.onlineaushadhi.com/">Health Corner</a>
+                                    target = "_blank" href="http://healthtips.onlineaushadhi.com/"><img src="https://images.onlineaushadhi.com/img/healthcornerico.png" alt></a><a
+                                    target = "_blank" class="ps-categories__name" href="http://healthtips.onlineaushadhi.com/">Health Corner</a>
                                 <p>Tips from health experts</p>
                             </div>
                         </div>
