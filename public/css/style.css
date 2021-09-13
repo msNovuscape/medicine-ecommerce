@@ -4338,7 +4338,7 @@ textarea.form-control {
     line-height: 30px;
   }
   .ps-product--detail .ps-document {
-    padding: 50px;
+    /* padding: 50px; */
   }
   .ps-product--detail .ps-document .ps-document__title {
     font-size: 50px;
@@ -8342,7 +8342,7 @@ textarea.form-control {
      object-fit: cover;
 }
 .back{
-  min-height: 350px;
+  /* min-height: 350px; */
   text-align:center;
   
 }
@@ -15882,10 +15882,10 @@ textarea.form-control {
 }
 
 .ps-footer--bottom p {
-  height: 100%;
+  /* height: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
   color: #fff;
 }
 
