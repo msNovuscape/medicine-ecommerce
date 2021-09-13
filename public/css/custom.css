@@ -544,3 +544,12 @@ hr.white {
   .ps-page--product .ps-product--gallery .ps-product__thumbnail {
       padding-left: 0 !important;
   }
+
+.ps-section--categories .ps-categories__item p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+.ps-section--categories .ps-categories__name {
+    line-height: 1 !important;
+    margin-bottom: 3px !important;
+}
