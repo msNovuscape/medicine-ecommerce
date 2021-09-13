@@ -139,7 +139,7 @@
                     </div>
                 </section>
                 <!-- Trending Products -->
-                <section class="ps-section--latest ps-section--default ps-section--alternate">
+                <section class="ps-section--latest ps-section--default ps-section--alternate ps-section--trending">
                     <div class="container">
                         <h3 class="ps-section__title">Trending Products<a style = "float:right;font-size:20px" href ="{{route('frontend.trending_view')}}">View all</a></h3>
                         <div class="ps-section__carousel">
@@ -318,7 +318,7 @@
                 </section>
 
                 <!-- Best Deals -->
-                <section class="ps-section--latest ps-section--default">
+                <section class="ps-section--latest ps-section--default  ps-section--trending">
                     <div class="container">
                         <div class="ps-section__header">
                             <h3 class="ps-section__title">Best Deals<a style = "float:right;font-size:20px" href ="{{route('frontend.best_deal')}}">View all</a></h3>
@@ -431,7 +431,7 @@
                 </div>
 
                 <!-- Recommended Products -->
-                <section class="ps-section--featured ps-section--default">
+                <section class="ps-section--featured ps-section--default  ps-section--trending">
                     <div class="container">
                         <h3 class="ps-section__title">Recommended Products<a style = "float:right;font-size:20px" href ="{{route('frontend.recommended_product')}}">View all</a></h3>
                         <div class="ps-section__content">

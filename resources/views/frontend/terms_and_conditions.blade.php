@@ -4,7 +4,7 @@
 
         <div class ="container" style = "justify-content:center">
             <br/>
-                                    <h5 class="text-uppercase m-b-5" style = "font-size:30px">Terms &amp; Conditions</h5>
+                                    <h3 class="ps-inner-page__title">Terms &amp; Conditions</h3><hr>
                                     <div class="">
                                             <div class="thumbnail thumbnail--no-border">
                                                 <div class="caption">

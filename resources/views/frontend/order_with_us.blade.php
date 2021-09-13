@@ -7,7 +7,7 @@
                         <div class="col-lg-12">
                             <div class="content__gutter-up-down content__gutter-left-right">
                                     <div class="col-lg-12">
-                                            <h5 class="text-uppercase m-b-5" style = "font-size:30px">{{$page->first()->title}}</h5>
+                                            <h3 class="ps-inner-page__title" style = "font-size:30px">{{$page->first()->title}}</h3> <hr>
                                             {!!html_entity_decode($page->first()->contents)!!}
                                 <hr>
                                 <br>
@@ -16,6 +16,7 @@
                                         <div class="thumbnail thumbnail--no-border">
                                             <img src="https://onlineaushadhi.com/img/001.jpg" alt="Img Title" class="img-responsiveÎ">
                                             <div class="caption">
+                                                <br>
                                                 <p class="title title--md m-b-10 text-uppercase">Ordering with Online Aushadhi</p>
                                                 <p>Buying prescription drugs online is easy, safe and secure at Online Aushadhi. We offer convenient ordering online
                                                     as well as through telephone. Every prescription drug order is reviewed by our licensed pharmacist before being
@@ -29,6 +30,7 @@
                                         <div class="thumbnail thumbnail--no-border">
                                             <img src="https://onlineaushadhi.com/img/002.jpg" alt="Img Title" class="img-responsiveÎ">
                                             <div class="caption">
+                                                <br>
                                                 <p class="title title--md m-b-10 text-uppercase">Customer Support Team</p>
                                                 <p>Our Customer Support Team is accessible Sunday to Friday from 9am to 6pm through email and by phone. If you
                                                     encounter any issues, questions, concerns regarding your desired medicine availability, its delivery or you
