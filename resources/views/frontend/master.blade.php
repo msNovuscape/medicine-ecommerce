@@ -778,7 +778,6 @@
         <div class="ps-nav__item"><a href="{{route('frontend.index')}}"><i class="icon-home2"></i></a></div>
         
         <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-user"></i></a></div>
-        <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-unlock"></i></a></div>
         <div class="ps-nav__item"><a href="{{route('wishlist.index')}}"><i class="fa fa-heart-o"></i>@if(auth()->user())<span id = "ajaxWishlist" class="badge">{{App\Models\Wishlist::where('user_id',auth()->user()->id)->count()}}</span>@endif</a>
         </div>
         <div class="ps-nav__item"><a href="{{route('shopping_cart.index')}}"><i class="icon-cart-empty"></i>@if(Session::has('cart'))
@@ -801,6 +800,7 @@
                 <li class="menu-item-has-children"><a href="{{route('frontend.about')}}">About Us</a></li>
                 <li class="menu-item-has-children"><a style = "color:#103178">Download:</a><a target = "_blank" href="https://play.google.com/store/apps/details?id=com.tnt.online_aushadhi">Android/</a><a target = "_blank" href = "https://apps.apple.com/us/app/online-aushadhi/id1546529422">IOS</a></li>
                 <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">FAQs</a></li>
+                <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">Logout</a></li>
             </ul>
         </div>
         <div class="ps-menu__footer">
