@@ -778,6 +778,7 @@
         <div class="ps-nav__item"><a href="{{route('frontend.index')}}"><i class="icon-home2"></i></a></div>
         
         <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-user"></i></a></div>
+        <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-unlock"></i></a></div>
         <div class="ps-nav__item"><a href="{{route('wishlist.index')}}"><i class="fa fa-heart-o"></i>@if(auth()->user())<span id = "ajaxWishlist" class="badge">{{App\Models\Wishlist::where('user_id',auth()->user()->id)->count()}}</span>@endif</a>
         </div>
         <div class="ps-nav__item"><a href="{{route('shopping_cart.index')}}"><i class="icon-cart-empty"></i>@if(Session::has('cart'))
