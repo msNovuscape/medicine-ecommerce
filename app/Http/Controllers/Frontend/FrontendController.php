@@ -69,7 +69,7 @@ class FrontendController extends Controller
         $composition = Composition::where('id',$product->first()->composition_id ?? null)->get();
         $isNarcotic = $composition->first()->is_narcotic ?? '0';
         $manufacture = Brand::where('id',$product->first()->parent_company_id)->get();
-        $substitute_products = Medicine::where('composition_id' ,'>',0)->where('composition','like','%'.$product->first()->composition.'%')->limit(8)->get(); 
+        $substitute_products = Medicine::where('id','!=',$product->first()->id)->where('composition_id' ,'>',0)->where('composition','like','%'.$product->first()->composition.'%')->limit(8)->get(); 
         $similar_products = Medicine::where('composition_id',0)->where('tags','like',$product->first()->tags)->limit(8)->get();
         $product = $product->first();
         return view('frontend.product',compact('product','manufacture','brand','similar_products','substitute_products','composition','isNarcotic','stock'));
@@ -143,12 +143,12 @@ class FrontendController extends Controller
                 $result->company_name = 'N/A';
                 
             }
-            if($result->img == null && $result->image_url == null){
-                $result->img = "https://images.onlineaushadhi.com/img/no-med.png";
+            
+            $image = $result->img ?? $result->image_url;
+            if($image == null){
+                $result->img = 'https://images.onlineaushadhi.com/img/no-med.png';
             }
-            else{
-                $result->img = $result->img ?? $result->image_url;
-            }
+            
             $stock = Stock::where('medicine_id',$result->id)->orderBy('id','desc')->get('sp_per_tab');
             
             $result->sp_per_piece = $stock->first()->sp_per_tab ?? $result->sp_per_piece ;
@@ -203,11 +203,9 @@ class FrontendController extends Controller
                 $result->company_name = 'N/A';
                 
             }
-            if($result->img == null && $result->image_url == null){
-                $result->img = "https://images.onlineaushadhi.com/img/no-med.png";
-            }
-            else{
-                $result->img = $result->img ?? $result->image_url;
+            $image = $result->img ?? $result->image_url;
+            if($image == null){
+                $result->img = 'https://images.onlineaushadhi.com/img/no-med.png';
             }
             $stock = Stock::where('medicine_id',$result->id)->orderBy('id','desc')->get('sp_per_tab');
             

@@ -27,6 +27,7 @@
                     center = el.data('owl-center');
                 if (target.children('div, span, a, img, h1, h2, h3, h4, h5, h5').length >= 2) {
                     el.owlCarousel({
+                        singleItem: true,
                         animateIn: dataAnimateIn,
                         animateOut: dataAnimateOut,
                         margin: dataGap,

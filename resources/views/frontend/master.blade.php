@@ -77,7 +77,6 @@
                                         <!-- <div class="flash-message">
                                             @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                                             @if(Session::has('alert-' . $msg))
-
                                             <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
                                             @endif
                                             @endforeach
@@ -367,7 +366,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </li>
@@ -778,6 +776,7 @@
         <div class="ps-nav__item"><a href="{{route('frontend.index')}}"><i class="icon-home2"></i></a></div>
         
         <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-user"></i></a></div>
+        <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-unlock"></i></a></div>
         <div class="ps-nav__item"><a href="{{route('wishlist.index')}}"><i class="fa fa-heart-o"></i>@if(auth()->user())<span id = "ajaxWishlist" class="badge">{{App\Models\Wishlist::where('user_id',auth()->user()->id)->count()}}</span>@endif</a>
         </div>
         <div class="ps-nav__item"><a href="{{route('shopping_cart.index')}}"><i class="icon-cart-empty"></i>@if(Session::has('cart'))
@@ -1214,7 +1213,6 @@
                                     <td>Rs 77.65</td>
                                     <td class="cs_out_of_stock"> <span>Pending </span>
                                     </td>
-
                                 </tr>
                                 <tr>
                                     <td class="ps-product__remove"> <a href="#"><i class="icon-cross"></i></a></td>
@@ -1227,10 +1225,8 @@
                                     </td>
                                     <td>1</td>
                                     <td>Rs 488.23</td>
-
                                     <td class="ps-product__status"> <span>Processing</span>
                                     </td>
-
                                 </tr>
                                 <tr>
                                     <td class="ps-product__remove"> <a href="#"><i class="icon-cross"></i></a></td>
@@ -1243,10 +1239,8 @@
                                     </td>
                                     <td>1</td>
                                     <td>Rs 436.87</td>
-
                                     <td class="ps-product__status"> <span>Delivery Sent</span>
                                     </td>
-
                                 </tr> -->
                             </tbody>
                         </table>

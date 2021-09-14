@@ -437,7 +437,7 @@
                         <div class="ps-section__content">
                             <div class="row m-0">
                                 @foreach($recommended_medicines as $recommended_medicine)
-                                <div class="col-12 col-md-4 col-lg-2dot4 p-0">
+                                <div class="col-6 col-md-4 col-lg-2dot4 p-0">
                                     <div class="ps-section__product">
                                         <div class="ps-product ps-product--standard">
                                             <div class="ps-product__thumbnail"><a class="ps-product__image"
@@ -1504,7 +1504,6 @@
                                                 <figure><img src="img/branch/brand-2.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1515,7 +1514,6 @@
                                                 <figure><img src="img/branch/brand-3.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1526,7 +1524,6 @@
                                                 <figure><img src="img/branch/brand-4.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1537,7 +1534,6 @@
                                                 <figure><img src="img/branch/brand-5.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1548,7 +1544,6 @@
                                                 <figure><img src="img/branch/brand-6.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1559,7 +1554,6 @@
                                                 <figure><img src="img/branch/brand-7.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1570,7 +1564,6 @@
                                                 <figure><img src="img/branch/brand-8.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -1581,7 +1574,6 @@
                                                 <figure><img src="img/branch/brand-9.jpg" alt="alt" />
                                                 </figure>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div> -->
@@ -1611,10 +1603,3 @@
     @section('scripts')
     <script type="text/javascript" src="{{asset('js/add_to_cart.js')}}"></script>
     @endsection
-        
-    
-
-
- 
-
-    

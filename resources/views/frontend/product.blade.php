@@ -17,28 +17,42 @@
                                     <div class="col-12 col-xl-7">
                                         <div class="ps-product--gallery">
                                             <div class="ps-product__thumbnail">
-                                                <div class="slide">@if($product->img == null && $product->image_url == null)
+                                                <div class="slide">
+                                                    @php
+                                                    $image = $product->img ?? $product->image_url;
+                                                    $image_url1 = $product->image_url1;
+                                                    $image_url2 = $product->image_url2;
+                                                    @endphp
+                                                    @if(empty($image))
                                                     <img src = "https://images.onlineaushadhi.com/img/no-med.png">
                                                 @else 
                                                     <img src="{{$product->img ?? $product->image_url}}" alt="Image unavailable" />
-                                                @endif   </div>
-                                                @if($product->image_url1 != null)<div class="slide"><img src="{{$product->imgage_url1}}" alt="alt" /></div>@endif
-                                                @if($product->image_url2 != null)<div class="slide"><img src="{{$product->imgage_url2}}" alt="alt" /></div>@endif
+                                                @endif   
+                                                </div>
+                                                @if(!empty($image_url1))<div class="slide"><img src="{{$product->imgage_url1}}" alt="alt" /></div>@endif
+                                                @if(!empty($image_url2))<div class="slide"><img src="{{$product->imgage_url2}}" alt="alt" /></div>@endif
                                             </div>
                                             <div class="ps-gallery--image">
                                                 <div class="slide">
-                                                    <div class="ps-gallery__item"><img src="{{$product->img ?? $prodcut->image_url}}"
-                                                            alt="alt" />
+                                                    <div class="ps-gallery__item">
+                                                @if(empty($image))
+
+                                                    <img src = "https://images.onlineaushadhi.com/img/no-med.png">
+                                                @else 
+                                                    <img src="{{$product->img ?? $product->image_url}}" alt="Image unavailable" />
+                                                @endif
+
                                                     </div>
+
                                                 </div>
 
-                                                @if($product->image_url1 != null)
+                                                @if(!empty($image_url1))
                                                 <div class="slide">
                                                     <div class="ps-gallery__item"><img src="{{$product->imgage_url1}}" alt="alt" />
                                                     </div>
                                                 </div>
                                                 @endif
-                                                @if($product->image_url2 != null)
+                                                @if(!empty($image_url2))
                                                 <div class="slide">
                                                     <div class="ps-gallery__item"><img src="{{$product->imgage_url2}}" alt="alt" />
                                                     </div>
@@ -1085,14 +1099,19 @@
                                 <div class="owl-carousel" data-owl-auto="false" data-owl-loop="true" data-owl-speed="13000"
                                     data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="5"
                                     data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="5"
-                                    data-owl-item-xl="5" data-owl-duration="1000" data-owl-mousedrag="on">
+                                    data-owl-item-xl="{{$substitute_products->count()}}" data-owl-duration="1000" data-owl-mousedrag="on">
 
                                     @foreach($substitute_products as $substitute_product)
                                         <div class="ps-section__product">
                                             <div class="ps-product ps-product--standard">
                                                 <div class="ps-product__thumbnail"><a class="ps-product__image"
                                                         href="{{route('frontend.product',['slug' => $substitute_product->slug])}}">
-                                                        <figure>@if($substitute_product->img == null && $substitute_product->image_url == null)
+                                                        @php
+                                                                $img = $substitute_product->img ?? $substitute_product->image_url;
+                                                            @endphp
+                                                        <figure>
+                                                            
+                                                            @if(empty($img))
                                                     <img src = "https://images.onlineaushadhi.com/img/no-med.png">
                                                 @else 
                                                     <img src="{{$substitute_product->img ?? $substitute_product->image_url}}" alt="Image unavailable" />
@@ -1152,11 +1171,13 @@
                         </section>
                     @endif
                     
-                    <p>Note: Prices are subjected to change at the time of delivery according to manufacturer's policy.</p>                           
                     
                 </div>
+                <p>Note: Prices are subjected to change at the time of delivery according to manufacturer's policy.</p>                           
+
             </div>
         </div>
+        
 @endsection
 
 @section('scripts')
