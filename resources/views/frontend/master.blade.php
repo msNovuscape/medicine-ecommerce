@@ -799,6 +799,7 @@
                 <li class="menu-item-has-children"><a href="{{route('frontend.about')}}">About Us</a></li>
                 <li class="menu-item-has-children"><a style = "color:#103178">Download:</a><a target = "_blank" href="https://play.google.com/store/apps/details?id=com.tnt.online_aushadhi">Android/</a><a target = "_blank" href = "https://apps.apple.com/us/app/online-aushadhi/id1546529422">IOS</a></li>
                 <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">FAQs</a></li>
+                <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">Logout</a></li>
             </ul>
         </div>
         <div class="ps-menu__footer">

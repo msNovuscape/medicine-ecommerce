@@ -602,7 +602,8 @@ hr.white {
         overflow-x: auto;
     }
     .ps-shopping > .container > .row,
-    .ps-wishlist > .container > .row {
+    .ps-wishlist > .container > .row,
+    .ps-account > .container > .row {
         justify-content: center;
         /* align-items: center; */
     }
@@ -610,46 +611,32 @@ hr.white {
         display: block;
         float: none !important;
     }
-    .ps-product--detail .ps-tab-list  {
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .ps-product--detail .ps-tab-list li {
-        margin: 0 0 15px !important;
-        flex: 0 0 48%;
-    }
-    .ps-product--detail .ps-tab-list li a {
-        text-align: center;
-    }
-    .ps-product--detail .ps-tab-list li a::before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: #ccc;
-        transition: all .35s ease 0s;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .ps-product--detail .ps-tab-list li a::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: #ccc;
-        transition: all .35s ease 0s;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-    .ps-product--detail .ps-tab-list li a.nav-link.active::before,
-    .ps-product--detail .ps-tab-list li a.nav-link.active::after {
-        background: #103178;
-    }
-    .ps-product--detail .ps-tab-list li a.nav-link.active {
-        color: #103178 !important;
-    }
-    .ps-product--detail .ps-tab-list li a {
-        color: ccc !important;
-    }
+    
+}
+
+.ps-product--detail .ps-tab-list li a {
+    text-align: center;
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+}
+.ps-product--detail .ps-tab-list  {
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+}
+.ps-product--detail .ps-tab-list li {
+    margin: 0 0 0 !important;
+    /* flex: 0 0 48%; */
+}
+
+.ps-product--detail .ps-tab-list li a.nav-link.active::before,
+.ps-product--detail .ps-tab-list li a.nav-link.active::after {
+    background: #103178;
+}
+.ps-product--detail .ps-tab-list li a.nav-link.active {
+    color: #103178 !important;
+}
+.ps-product--detail .ps-tab-list li a {
+    color: ccc !important;
 }
