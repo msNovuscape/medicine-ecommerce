@@ -180,11 +180,11 @@ class FrontendController extends Controller
         $manufacture_id = Company::where('parent_id', 0)->where('fullname','like','%'.$keyword.'%')->get('id');
         $composition_id = Composition::where('composition','like', $keyword)->get('id');
         $brand_id = Brand::where('parent_id' ,'!=', 0)->where('fullname','like','%'.$keyword.'%')->get('id');
-        $results = Medicine::where('medicine_name','like',$keyword.'%')
-                ->orWhere('composition','like',$keyword)
-                ->orWhere('parent_company_id', $manufacture_id->first()->id ?? null)
-                ->orWhere('company_id', $brand_id->first()->id ?? null)
-        ->limit(15)->orderBy('medicine_name')->get();
+        $results = Medicine::where('medicine_name','like','%'.$keyword.'%')
+        ->orWhere('composition','like','%'.$keyword)
+        ->orWhere('parent_company_id', $manufacture_id->first()->id ?? null)
+        ->orWhere('company_id', $brand_id->first()->id ?? null)
+->limit(20)->orderBy('medicine_name')->get();
         foreach($results as $result){
             $parent_company_id  = Company::where('id',$result->parent_company_id)->first();
             $brand_id  = Brand::where('id',$result->company_id)->first();

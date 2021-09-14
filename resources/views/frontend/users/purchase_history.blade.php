@@ -1,4 +1,4 @@
- @extends('frontend.master')
+@extends('frontend.master')
     @section('content')       
         <div class="ps-wishlist">
             <div class="container">
@@ -49,9 +49,9 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="ps-product__row ps-product__quantity">
+                                    <div class="ps-product__row ps-product__stock">
                                         <div class="ps-product__label">Delivery Date:</div>
-                                        <div class="ps-product__value">{{$purchase->delivery_date}}</div>
+                                        <div class="ps-product__value"><span class="ps-product__out-stock ">{{$purchase->delivery_date}}</span></div>
                                     </div>
                                     <div class="ps-product__row ps-product__subtotal">
                                         <div class="ps-product__label">Total(NRs):</div>

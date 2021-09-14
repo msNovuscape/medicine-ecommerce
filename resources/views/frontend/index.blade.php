@@ -506,7 +506,7 @@
                                             Ausadhi</div>
                                         <div class="ps-banner__btn"><img src="img/icon/icon14.png" alt>Get Refill Call
                                             Alert!</div>
-                                    </div><a class="ps-banner__shop bg-light-blue" href="{{$banner->redirect_url}}">{{$banner->button_title}}</a>
+                                    </div><a class="ps-banner__shop bg-light-blue" target = "_blank" href="{{$banner->redirect_url}}">{{$banner->button_title}}</a>
                                 </div>
                                 <div class="ps-banner__thumnail"><img class="ps-banner__round" src="img/round5.png"
                                         alt><img class="ps-banner__image" src="{{$banner->banner_image}}" alt></div>
@@ -1487,7 +1487,7 @@
                                 @foreach($partners as $partner)
                                 <div class="ps-section__product">
                                     <div class="ps-product ps-product--standard">
-                                        <div class="ps-product__thumbnail"><a class="ps-product__image"
+                                        <div class="ps-product__thumbnail"><a target = "_blank" class="ps-product__image"
                                                 href="{{$partner->redirect_url}}">
                                                 <figure><img src="{{$partner->image_path}}" alt="Image unavailable" />
                                                 </figure>
