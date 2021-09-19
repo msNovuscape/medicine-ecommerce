@@ -20,8 +20,8 @@ class WishlistController extends Controller
     public function add(Request $request){
         $prodcut_id = $request->id;
         $intended_url = Session::get('url.intended', url('/'));
-        $intended_url_id = explode('=',$intended_url)[1];
-        $prodcut_id = $prodcut_id ?? $intended_url_id;
+        $intended_url_id = explode('=',$intended_url);
+        $prodcut_id = $prodcut_id ?? last($intended_url_id);
         
         $user_id = auth()->user()->id;
         $wishlist = Wishlist::where('medicine_id',$prodcut_id)->get();

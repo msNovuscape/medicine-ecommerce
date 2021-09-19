@@ -376,8 +376,9 @@ class FrontendController extends Controller
     public function manufacturer(Request $request){
         $slug = $request->slug;
         $parent_company_id = Company::where('parent_id','0')->where('slug',$slug)->get();
+        $title = $parent_company_id->first()->fullname;
         $medicines = Medicine::where('parent_company_id',$parent_company_id->first()->id)->orderBy('id','desc')->paginate(15);
-        return view('frontend.manufacturer',compact('medicines'));
+        return view('frontend.manufacturer',compact('medicines','title'));
     }
     public function composition(Request $request){
         $slug = $request->slug;

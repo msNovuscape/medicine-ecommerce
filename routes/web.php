@@ -19,6 +19,10 @@ Route::group(['middleware' => 'guest'], function(){
     Route::get('/login','App\Http\Controllers\Frontend\LoginController@login')->name('login');
 
     Route::post('/post_login','App\Http\Controllers\Frontend\LoginController@post_login')->name('post_login');
+    Route::get('/forget_password','App\Http\Controllers\Frontend\AccountController@forget_password')->name('account.forget_password');
+    Route::post('/send_reset_link','App\Http\Controllers\Frontend\AccountController@send_reset_link')->name('account.send_reset_link');
+    Route::get('/reset-password/{token}','App\Http\Controllers\Frontend\AccountController@passwordResetForm')->name('account.passwordResetForm');
+    Route::post('/reset_password','App\Http\Controllers\Frontend\AccountController@reset_password')->name('account.reset_password');
     
 
     
@@ -72,5 +76,5 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/manufacturer/{slug}','App\Http\Controllers\Frontend\FrontendController@manufacturer')->name('frontend.manufacturer');
     Route::get('/composition/{slug}','App\Http\Controllers\Frontend\FrontendController@composition')->name('frontend.composition');
     Route::get('/pages/{slug}','App\Http\Controllers\Frontend\FrontendController@order_with_us')->name('frontend.order_with_us');
-    Route::get('/reset_password','App\Http\Controllers\Frontend\LoginController@passwordReset')->name('login.password_reset');
+    
     

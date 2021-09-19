@@ -34,9 +34,7 @@ class LoginController extends Controller
         return redirect()->route('login');
     }
 
-    public function password_reset(){
-
-    }
+    
     
     public function logout(){
         auth()->logout();

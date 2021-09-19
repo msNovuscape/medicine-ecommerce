@@ -46,7 +46,8 @@ function add_to_wishlist(id){
         dataType:'json',
         success:function(response){
             console.log(response.count);
-         $( "#ajaxWishlist" ).text(response.count);
+            $("#ajaxWishlist").text(response.count);
+            $( "#ajaxWishlistMobile" ).text(response.count);
          $( "#wishlistCount" ).text('There are ' + response.count + ' items in your wishlist');
          $("#wishlistProduct").attr("src",response.img_src);
          $('#popupAddwishlist').modal("show");

@@ -40,14 +40,14 @@
                                 @foreach($products as $product)
                                     <li>
                                         <div class="ps-product ps-product--wishlist">
-                                            <div class="ps-product__remove"><a href="#"><i class="icon-cross"></i></a></div>
+                                            <div class="ps-product__remove"><a href="{{route('shopping_cart.remove',['id' => $product['item']['id']])}}"><i class="icon-cross"></i></a></div>
                                             <div class="ps-product__thumbnail"><a class="ps-product__image"
-                                                    href="product1.html">
+                                                    href="{{route('frontend.product',['slug' => $product['item']->slug])}}">
                                                     <figure>@if($product['item']->img == null && $product['item']->image_url == null)<img src = "https://images.onlineaushadhi.com/img/no-med.png">@endif<img src="{{$product['item']->img ?? $product['item']->image_url}}">
                                                     </figure>
                                                 </a></div>
                                             <div class="ps-product__content">
-                                                <h5 class="ps-product__title"><a href="product1.html">{{$product['item']->medicine_name}}</a></h5>
+                                                <h5 class="ps-product__title"><a href="{{route('frontend.product',['slug' => $product['item']->slug])}}">{{$product['item']->medicine_name}}</a></h5>
                                                 <div class="ps-product__row">
                                                     <div class="ps-product__label">Price:</div>
                                                     <div class="ps-product__value"><span class="ps-product__price">Rs

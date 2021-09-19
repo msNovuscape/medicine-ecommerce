@@ -61,6 +61,11 @@
                                         <div class="ps-product__value"><span class="ps-product__price sale">{{$prescription->date}}</span>
                                         </div>
                                     </div>
+                                    <div class="ps-product__row">
+                                        <div class="ps-product__label">Remark:</div>
+                                        <div class="ps-product__value"><span class="ps-product__price sale">{{$prescription->remark}}</span>
+                                        </div>
+                                    </div>
                                     <!-- <div class="ps-product__row ps-product__stock">
                                         <div class="ps-product__label">Stock:</div>
                                         <div class="ps-product__value"><span class="ps-product__out-stock ">Out of stock

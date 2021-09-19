@@ -1601,5 +1601,5 @@
         </div>
     @endsection
     @section('scripts')
-    <script type="text/javascript" src="{{asset('js/add_to_cart.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/add_to_cart.js')}}"></script>
     @endsection

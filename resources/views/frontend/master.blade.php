@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{URL::asset('plugins/font-awesome/css/font-awesome.min.css')}}">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/5.15.4/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{URL::asset('fonts/Linearicons/Font/demo-files/demo.css')}}">
-    <link rel="preconnect" href="{{URL::asset('https://fonts.gstatic.com/')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
     
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Jost:400,500,600,700&amp;display=swap&amp;ver=1607580870">
@@ -92,7 +92,7 @@
                                         <div class="form-group form-check">
                                             <input class="form-check-input" type="checkbox">
                                             <label>Remember Me</label><br/>
-                                        <p><a style = "margin-top:5px" href="">Lost your password?</a></p>
+                                        <p><a style = "margin-top:5px" href="{{route('account.forget_password')}}">Lost your password?</a></p>
 
                                         </div>
                                         <div class="row">
@@ -777,7 +777,7 @@
         
         <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-user"></i></a></div>
         <div class="ps-nav__item"><a href="{{route('account.index')}}"><i class="icon-unlock"></i></a></div>
-        <div class="ps-nav__item"><a href="{{route('wishlist.index')}}"><i class="fa fa-heart-o"></i>@if(auth()->user())<span id = "ajaxWishlist" class="badge">{{App\Models\Wishlist::where('user_id',auth()->user()->id)->count()}}</span>@endif</a>
+        <div class="ps-nav__item"><a href="{{route('wishlist.index')}}"><i class="fa fa-heart-o"></i>@if(auth()->user())<span id = "ajaxWishlistMobile" class="badge">{{App\Models\Wishlist::where('user_id',auth()->user()->id)->count()}}</span>@endif</a>
         </div>
         <div class="ps-nav__item"><a href="{{route('shopping_cart.index')}}"><i class="icon-cart-empty"></i>@if(Session::has('cart'))
                                   <span id="totalQty" class="badge">
@@ -799,7 +799,13 @@
                 <li class="menu-item-has-children"><a href="{{route('frontend.about')}}">About Us</a></li>
                 <li class="menu-item-has-children"><a style = "color:#103178">Download:</a><a target = "_blank" href="https://play.google.com/store/apps/details?id=com.tnt.online_aushadhi">Android/</a><a target = "_blank" href = "https://apps.apple.com/us/app/online-aushadhi/id1546529422">IOS</a></li>
                 <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">FAQs</a></li>
-                <li class="menu-item-has-children"><a href="{{route('frontend.FAQs')}}">Logout</a></li>
+                @auth
+                <li class="menu-item-has-children"><a href="{{route('logout')}}">Logout</a></li>
+                @endauth
+                @guest
+                <li class="menu-item-has-children"><a href="{{route('login')}}">Login</a></li>
+                <li class="menu-item-has-children"><a href="{{route('register')}}">Register</a></li>
+                @endguest
             </ul>
         </div>
         <div class="ps-menu__footer">

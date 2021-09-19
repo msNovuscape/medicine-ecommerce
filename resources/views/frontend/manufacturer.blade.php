@@ -2,8 +2,12 @@
     @section('content')
     <div class = "container">
     <section class="ps-section--featured">
+    <h3 class="ps-section__title">{{$title}}</h3>
+
                         <div class="ps-section__content">
+
                             <div class="row m-0">
+                                
                                 @foreach($medicines as $medicine)
                                 <div class="col-6 col-md-4 col-lg-2dot4 p-0">
                                     <div class="ps-section__product">
